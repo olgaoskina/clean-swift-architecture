@@ -13,8 +13,10 @@ protocol JobListDisplayLogic {
 
 class JobListViewController: UIViewController {
     
-    var interactor: JobListBusinessLogic?
+    var interactor: (JobListBusinessLogic & JobListDataStore)?
     var router: JobListRoutingLogic?
+    
+    @IBOutlet weak var jobListTableView: UITableView!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -25,6 +27,23 @@ class JobListViewController: UIViewController {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setup()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        configureTableView()
+        fetchJobs()
+    }
+    
+    private func fetchJobs() {
+        let request = JobListModels.FetchJobList.Request()
+        interactor?.fetchJobs(request)
+    }
+    
+    private func configureTableView() {
+        jobListTableView.delegate = self
+        jobListTableView.dataSource = self
     }
     
     private func setup() {
@@ -45,6 +64,28 @@ class JobListViewController: UIViewController {
 
 extension JobListViewController: JobListDisplayLogic {
     func displayJobs(_ viewModel: JobListModels.FetchJobList.ViewModel) {
+        jobListTableView.reloadData()
+    }
+}
+
+extension JobListViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return interactor?.jobs.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let jobCell = tableView.dequeueReusableCell(withIdentifier: "JobTableViewCell") {
+            jobCell.textLabel?.text = interactor?.jobs[indexPath.row].title
+            
+            return jobCell
+        }
         
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        router?.routeToDetail()
     }
 }

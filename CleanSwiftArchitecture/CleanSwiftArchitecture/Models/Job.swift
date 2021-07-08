@@ -8,5 +8,5 @@
 import Foundation
 
 struct Job {
-    
+    let title: String
 }
