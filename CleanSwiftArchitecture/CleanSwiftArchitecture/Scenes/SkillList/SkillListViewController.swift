@@ -14,7 +14,7 @@ protocol SkillListDisplayLogic {
 class SkillListViewController: UIViewController {
     
     var interactor: (SkillListBusinessLogic & SkillListDataStore)?
-    var router: SkillListRoutingLogic?
+    var router: (SkillListRoutingLogic & SkillListDataPassing)?
     
     @IBOutlet weak var skillListTableView: UITableView!
     

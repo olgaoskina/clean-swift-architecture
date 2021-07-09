@@ -86,6 +86,6 @@ extension JobListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        router?.routeToDetail()
+        router?.routeToSkillList(ar: indexPath)
     }
 }

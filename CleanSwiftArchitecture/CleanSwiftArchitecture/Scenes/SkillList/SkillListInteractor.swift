@@ -12,9 +12,11 @@ protocol SkillListBusinessLogic {
 }
 
 protocol SkillListDataStore {
+    var job: Job? { get set }
     var skills: [Skill] { get }
 }
 class SkillListInteractor: SkillListBusinessLogic, SkillListDataStore {
+    var job: Job?
     var skills: [Skill] = []
     var presenter: SkillListPresentationLogic?
     
