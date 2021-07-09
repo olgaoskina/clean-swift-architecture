@@ -60,6 +60,55 @@
             </objects>
             <point key="canvasLocation" x="-65" y="89"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Lnx-jF-h2z">
+            <objects>
+                <viewController id="W8M-GS-akb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EwS-De-qSU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skills" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJL-Pd-myo">
+                                <rect key="frame" x="16" y="60" width="382" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="UZ9-eJ-ACj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NEO-3J-nVK">
+                                <rect key="frame" x="16" y="97" width="382" height="749"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SkillTableViewCell" id="mQa-jo-esf">
+                                        <rect key="frame" x="0.0" y="24.5" width="382" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mQa-jo-esf" id="Kgk-y3-cxW">
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iMy-Gg-kmQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NEO-3J-nVK" firstAttribute="top" secondItem="bJL-Pd-myo" secondAttribute="bottom" constant="16" id="80S-zN-I0R"/>
+                            <constraint firstItem="bJL-Pd-myo" firstAttribute="top" secondItem="iMy-Gg-kmQ" secondAttribute="top" constant="16" id="IsZ-jq-xXj"/>
+                            <constraint firstItem="iMy-Gg-kmQ" firstAttribute="bottom" secondItem="NEO-3J-nVK" secondAttribute="bottom" constant="16" id="SOn-uO-Cu4"/>
+                            <constraint firstItem="iMy-Gg-kmQ" firstAttribute="trailing" secondItem="bJL-Pd-myo" secondAttribute="trailing" constant="16" id="UOD-TK-LI1"/>
+                            <constraint firstItem="NEO-3J-nVK" firstAttribute="leading" secondItem="iMy-Gg-kmQ" secondAttribute="leading" constant="16" id="cUG-mh-L9K"/>
+                            <constraint firstItem="iMy-Gg-kmQ" firstAttribute="trailing" secondItem="NEO-3J-nVK" secondAttribute="trailing" constant="16" id="mUX-lP-e3b"/>
+                            <constraint firstItem="bJL-Pd-myo" firstAttribute="leading" secondItem="iMy-Gg-kmQ" secondAttribute="leading" constant="16" id="u28-TA-Q6W"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="arr-5B-fi2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="713" y="88"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
