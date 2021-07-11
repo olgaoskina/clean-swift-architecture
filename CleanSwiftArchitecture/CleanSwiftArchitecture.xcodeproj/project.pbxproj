@@ -12,17 +12,17 @@
 		E22122862697AA5F00807E8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22122842697AA5F00807E8C /* Main.storyboard */; };
 		E22122882697AA6000807E8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E22122872697AA6000807E8C /* Assets.xcassets */; };
 		E221228B2697AA6000807E8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22122892697AA6000807E8C /* LaunchScreen.storyboard */; };
-		E22122992697B50100807E8C /* JobListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122982697B50100807E8C /* JobListViewController.swift */; };
-		E221229B2697B5ED00807E8C /* JobListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E221229A2697B5ED00807E8C /* JobListRouter.swift */; };
-		E221229D2697B5F900807E8C /* JobListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E221229C2697B5F900807E8C /* JobListPresenter.swift */; };
-		E221229F2697B62800807E8C /* JobListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E221229E2697B62800807E8C /* JobListInteractor.swift */; };
-		E22122A12697B64700807E8C /* JobListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122A02697B64700807E8C /* JobListModels.swift */; };
+		E22122992697B50100807E8C /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122982697B50100807E8C /* PostListViewController.swift */; };
+		E221229B2697B5ED00807E8C /* PostListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E221229A2697B5ED00807E8C /* PostListRouter.swift */; };
+		E221229D2697B5F900807E8C /* PostListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E221229C2697B5F900807E8C /* PostListPresenter.swift */; };
+		E221229F2697B62800807E8C /* PostListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E221229E2697B62800807E8C /* PostListInteractor.swift */; };
+		E22122A12697B64700807E8C /* PostListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122A02697B64700807E8C /* PostListModels.swift */; };
 		E22122A42697B73B00807E8C /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122A32697B73B00807E8C /* Job.swift */; };
-		E22122AF2697C81C00807E8C /* SkillListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122AA2697C81C00807E8C /* SkillListViewController.swift */; };
-		E22122B02697C81C00807E8C /* SkillListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122AB2697C81C00807E8C /* SkillListModels.swift */; };
-		E22122B12697C81C00807E8C /* SkillListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122AC2697C81C00807E8C /* SkillListInteractor.swift */; };
-		E22122B22697C81C00807E8C /* SkillListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122AD2697C81C00807E8C /* SkillListRouter.swift */; };
-		E22122B32697C81C00807E8C /* SkillListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122AE2697C81C00807E8C /* SkillListPresenter.swift */; };
+		E22122AF2697C81C00807E8C /* CommentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122AA2697C81C00807E8C /* CommentListViewController.swift */; };
+		E22122B02697C81C00807E8C /* CommentListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122AB2697C81C00807E8C /* CommentListModels.swift */; };
+		E22122B12697C81C00807E8C /* CommentListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122AC2697C81C00807E8C /* CommentListInteractor.swift */; };
+		E22122B22697C81C00807E8C /* CommentListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122AD2697C81C00807E8C /* CommentListRouter.swift */; };
+		E22122B32697C81C00807E8C /* CommentListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122AE2697C81C00807E8C /* CommentListPresenter.swift */; };
 		E22122B52697C8BA00807E8C /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122B42697C8BA00807E8C /* Skill.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,17 +34,17 @@
 		E22122872697AA6000807E8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E221228A2697AA6000807E8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E221228C2697AA6000807E8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E22122982697B50100807E8C /* JobListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewController.swift; sourceTree = "<group>"; };
-		E221229A2697B5ED00807E8C /* JobListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListRouter.swift; sourceTree = "<group>"; };
-		E221229C2697B5F900807E8C /* JobListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListPresenter.swift; sourceTree = "<group>"; };
-		E221229E2697B62800807E8C /* JobListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListInteractor.swift; sourceTree = "<group>"; };
-		E22122A02697B64700807E8C /* JobListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListModels.swift; sourceTree = "<group>"; };
+		E22122982697B50100807E8C /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
+		E221229A2697B5ED00807E8C /* PostListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListRouter.swift; sourceTree = "<group>"; };
+		E221229C2697B5F900807E8C /* PostListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListPresenter.swift; sourceTree = "<group>"; };
+		E221229E2697B62800807E8C /* PostListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListInteractor.swift; sourceTree = "<group>"; };
+		E22122A02697B64700807E8C /* PostListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListModels.swift; sourceTree = "<group>"; };
 		E22122A32697B73B00807E8C /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
-		E22122AA2697C81C00807E8C /* SkillListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillListViewController.swift; sourceTree = "<group>"; };
-		E22122AB2697C81C00807E8C /* SkillListModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillListModels.swift; sourceTree = "<group>"; };
-		E22122AC2697C81C00807E8C /* SkillListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillListInteractor.swift; sourceTree = "<group>"; };
-		E22122AD2697C81C00807E8C /* SkillListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillListRouter.swift; sourceTree = "<group>"; };
-		E22122AE2697C81C00807E8C /* SkillListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillListPresenter.swift; sourceTree = "<group>"; };
+		E22122AA2697C81C00807E8C /* CommentListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentListViewController.swift; sourceTree = "<group>"; };
+		E22122AB2697C81C00807E8C /* CommentListModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentListModels.swift; sourceTree = "<group>"; };
+		E22122AC2697C81C00807E8C /* CommentListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentListInteractor.swift; sourceTree = "<group>"; };
+		E22122AD2697C81C00807E8C /* CommentListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentListRouter.swift; sourceTree = "<group>"; };
+		E22122AE2697C81C00807E8C /* CommentListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentListPresenter.swift; sourceTree = "<group>"; };
 		E22122B42697C8BA00807E8C /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,22 +109,22 @@
 		E22122942697AB9E00807E8C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				E22122962697B4A200807E8C /* JobList */,
-				E22122A92697C81C00807E8C /* SkillList */,
+				E22122962697B4A200807E8C /* PostList */,
+				E22122A92697C81C00807E8C /* CommentList */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		E22122962697B4A200807E8C /* JobList */ = {
+		E22122962697B4A200807E8C /* PostList */ = {
 			isa = PBXGroup;
 			children = (
-				E22122982697B50100807E8C /* JobListViewController.swift */,
-				E221229A2697B5ED00807E8C /* JobListRouter.swift */,
-				E221229C2697B5F900807E8C /* JobListPresenter.swift */,
-				E221229E2697B62800807E8C /* JobListInteractor.swift */,
-				E22122A02697B64700807E8C /* JobListModels.swift */,
+				E22122982697B50100807E8C /* PostListViewController.swift */,
+				E221229A2697B5ED00807E8C /* PostListRouter.swift */,
+				E221229C2697B5F900807E8C /* PostListPresenter.swift */,
+				E221229E2697B62800807E8C /* PostListInteractor.swift */,
+				E22122A02697B64700807E8C /* PostListModels.swift */,
 			);
-			path = JobList;
+			path = PostList;
 			sourceTree = "<group>";
 		};
 		E22122A22697B72E00807E8C /* Models */ = {
@@ -136,16 +136,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		E22122A92697C81C00807E8C /* SkillList */ = {
+		E22122A92697C81C00807E8C /* CommentList */ = {
 			isa = PBXGroup;
 			children = (
-				E22122AA2697C81C00807E8C /* SkillListViewController.swift */,
-				E22122AB2697C81C00807E8C /* SkillListModels.swift */,
-				E22122AC2697C81C00807E8C /* SkillListInteractor.swift */,
-				E22122AD2697C81C00807E8C /* SkillListRouter.swift */,
-				E22122AE2697C81C00807E8C /* SkillListPresenter.swift */,
+				E22122AA2697C81C00807E8C /* CommentListViewController.swift */,
+				E22122AB2697C81C00807E8C /* CommentListModels.swift */,
+				E22122AC2697C81C00807E8C /* CommentListInteractor.swift */,
+				E22122AD2697C81C00807E8C /* CommentListRouter.swift */,
+				E22122AE2697C81C00807E8C /* CommentListPresenter.swift */,
 			);
-			path = SkillList;
+			path = CommentList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,18 +218,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E22122B12697C81C00807E8C /* SkillListInteractor.swift in Sources */,
-				E22122A12697B64700807E8C /* JobListModels.swift in Sources */,
-				E22122B22697C81C00807E8C /* SkillListRouter.swift in Sources */,
-				E221229F2697B62800807E8C /* JobListInteractor.swift in Sources */,
-				E221229D2697B5F900807E8C /* JobListPresenter.swift in Sources */,
-				E22122992697B50100807E8C /* JobListViewController.swift in Sources */,
+				E22122B12697C81C00807E8C /* CommentListInteractor.swift in Sources */,
+				E22122A12697B64700807E8C /* PostListModels.swift in Sources */,
+				E22122B22697C81C00807E8C /* CommentListRouter.swift in Sources */,
+				E221229F2697B62800807E8C /* PostListInteractor.swift in Sources */,
+				E221229D2697B5F900807E8C /* PostListPresenter.swift in Sources */,
+				E22122992697B50100807E8C /* PostListViewController.swift in Sources */,
 				E221227F2697AA5F00807E8C /* AppDelegate.swift in Sources */,
 				E22122B52697C8BA00807E8C /* Skill.swift in Sources */,
-				E221229B2697B5ED00807E8C /* JobListRouter.swift in Sources */,
-				E22122B32697C81C00807E8C /* SkillListPresenter.swift in Sources */,
-				E22122AF2697C81C00807E8C /* SkillListViewController.swift in Sources */,
-				E22122B02697C81C00807E8C /* SkillListModels.swift in Sources */,
+				E221229B2697B5ED00807E8C /* PostListRouter.swift in Sources */,
+				E22122B32697C81C00807E8C /* CommentListPresenter.swift in Sources */,
+				E22122AF2697C81C00807E8C /* CommentListViewController.swift in Sources */,
+				E22122B02697C81C00807E8C /* CommentListModels.swift in Sources */,
 				E22122812697AA5F00807E8C /* SceneDelegate.swift in Sources */,
 				E22122A42697B73B00807E8C /* Job.swift in Sources */,
 			);

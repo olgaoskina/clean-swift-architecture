@@ -1,5 +1,5 @@
 //
-//  SkillListModels.swift
+//  CommentListModels.swift
 //  CleanSwiftArchitecture
 //
 //  Created by Olga Dudina on 09.07.2021.
@@ -7,17 +7,17 @@
 
 import Foundation
 
-struct SkillListModels {
-    struct FetchSkillList {
+struct CommentListModels {
+    struct FetchCommentList {
         struct Request {
         }
         
         struct Response {
-            let skills: [Skill]
+            let comments: [Comment]
         }
         
         struct ViewModel {
-            let skills: [Skill]
+            let comments: [Comment]
         }
     }
 }

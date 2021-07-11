@@ -1,5 +1,5 @@
 //
-//  JobListViewController.swift
+//  PostListViewController.swift
 //  CleanSwiftArchitecture
 //
 //  Created by Olga Dudina on 09.07.2021.
@@ -7,16 +7,16 @@
 
 import UIKit
 
-protocol JobListDisplayLogic {
-    func displayJobs(_ viewModel: JobListModels.FetchJobList.ViewModel)
+protocol PostListDisplayLogic {
+    func displayPosts(_ viewModel: PostListModels.FetchPostList.ViewModel)
 }
 
-class JobListViewController: UIViewController {
+class PostListViewController: UIViewController {
     
-    var interactor: (JobListBusinessLogic & JobListDataStore)?
-    var router: JobListRoutingLogic?
+    var interactor: (PostListBusinessLogic & PostListDataStore)?
+    var router: PostListRoutingLogic?
     
-    @IBOutlet weak var jobListTableView: UITableView!
+    @IBOutlet weak var postListTableView: UITableView!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -33,23 +33,23 @@ class JobListViewController: UIViewController {
         super.viewDidLoad()
         
         configureTableView()
-        fetchJobs()
+        fetchPosts()
     }
     
-    private func fetchJobs() {
-        let request = JobListModels.FetchJobList.Request()
-        interactor?.fetchJobs(request)
+    private func fetchPosts() {
+        let request = PostListModels.FetchPostList.Request()
+        interactor?.fetchPosts(request)
     }
     
     private func configureTableView() {
-        jobListTableView.delegate = self
-        jobListTableView.dataSource = self
+        postListTableView.delegate = self
+        postListTableView.dataSource = self
     }
     
     private func setup() {
-        let interactor = JobListInteractor()
-        let presenter = JobListPresenter()
-        let router = JobListRouter()
+        let interactor = PostListInteractor()
+        let presenter = PostListPresenter()
+        let router = PostListRouter()
         
         interactor.presenter = presenter
         presenter.viewController = self
@@ -62,22 +62,22 @@ class JobListViewController: UIViewController {
     }
 }
 
-extension JobListViewController: JobListDisplayLogic {
-    func displayJobs(_ viewModel: JobListModels.FetchJobList.ViewModel) {
-        jobListTableView.reloadData()
+extension PostListViewController: PostListDisplayLogic {
+    func displayPosts(_ viewModel: PostListModels.FetchPostList.ViewModel) {
+        postListTableView.reloadData()
     }
 }
 
-extension JobListViewController: UITableViewDataSource, UITableViewDelegate {
+extension PostListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return interactor?.jobs.count ?? 0
+        return interactor?.posts.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let jobCell = tableView.dequeueReusableCell(withIdentifier: "JobTableViewCell") {
-            jobCell.textLabel?.text = interactor?.jobs[indexPath.row].title
+        if let postCell = tableView.dequeueReusableCell(withIdentifier: "PostTableViewCell") {
+            postCell.textLabel?.text = interactor?.posts[indexPath.row].title
             
-            return jobCell
+            return postCell
         }
         
         return UITableViewCell()
@@ -86,6 +86,6 @@ extension JobListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        router?.routeToSkillList(ar: indexPath)
+        router?.routeToCommentList(ar: indexPath)
     }
 }

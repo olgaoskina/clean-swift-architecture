@@ -1,5 +1,5 @@
 //
-//  JobListModels.swift
+//  PostListModels.swift
 //  CleanSwiftArchitecture
 //
 //  Created by Olga Dudina on 09.07.2021.
@@ -7,17 +7,17 @@
 
 import Foundation
 
-struct JobListModels {
-    struct FetchJobList {
+struct PostListModels {
+    struct FetchPostList {
         struct Request {
         }
         
         struct Response {
-            let jobs: [Job]
+            let posts: [Post]
         }
         
         struct ViewModel {
-            let jobs: [Job]
+            let posts: [Post]
         }
     }
 }
