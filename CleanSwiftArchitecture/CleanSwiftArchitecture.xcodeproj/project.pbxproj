@@ -17,13 +17,13 @@
 		E221229D2697B5F900807E8C /* PostListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E221229C2697B5F900807E8C /* PostListPresenter.swift */; };
 		E221229F2697B62800807E8C /* PostListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E221229E2697B62800807E8C /* PostListInteractor.swift */; };
 		E22122A12697B64700807E8C /* PostListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122A02697B64700807E8C /* PostListModels.swift */; };
-		E22122A42697B73B00807E8C /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122A32697B73B00807E8C /* Job.swift */; };
+		E22122A42697B73B00807E8C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122A32697B73B00807E8C /* Post.swift */; };
 		E22122AF2697C81C00807E8C /* CommentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122AA2697C81C00807E8C /* CommentListViewController.swift */; };
 		E22122B02697C81C00807E8C /* CommentListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122AB2697C81C00807E8C /* CommentListModels.swift */; };
 		E22122B12697C81C00807E8C /* CommentListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122AC2697C81C00807E8C /* CommentListInteractor.swift */; };
 		E22122B22697C81C00807E8C /* CommentListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122AD2697C81C00807E8C /* CommentListRouter.swift */; };
 		E22122B32697C81C00807E8C /* CommentListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122AE2697C81C00807E8C /* CommentListPresenter.swift */; };
-		E22122B52697C8BA00807E8C /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122B42697C8BA00807E8C /* Skill.swift */; };
+		E22122B52697C8BA00807E8C /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122B42697C8BA00807E8C /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,13 +39,13 @@
 		E221229C2697B5F900807E8C /* PostListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListPresenter.swift; sourceTree = "<group>"; };
 		E221229E2697B62800807E8C /* PostListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListInteractor.swift; sourceTree = "<group>"; };
 		E22122A02697B64700807E8C /* PostListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListModels.swift; sourceTree = "<group>"; };
-		E22122A32697B73B00807E8C /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		E22122A32697B73B00807E8C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E22122AA2697C81C00807E8C /* CommentListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentListViewController.swift; sourceTree = "<group>"; };
 		E22122AB2697C81C00807E8C /* CommentListModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentListModels.swift; sourceTree = "<group>"; };
 		E22122AC2697C81C00807E8C /* CommentListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentListInteractor.swift; sourceTree = "<group>"; };
 		E22122AD2697C81C00807E8C /* CommentListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentListRouter.swift; sourceTree = "<group>"; };
 		E22122AE2697C81C00807E8C /* CommentListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentListPresenter.swift; sourceTree = "<group>"; };
-		E22122B42697C8BA00807E8C /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
+		E22122B42697C8BA00807E8C /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,8 +130,8 @@
 		E22122A22697B72E00807E8C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E22122A32697B73B00807E8C /* Job.swift */,
-				E22122B42697C8BA00807E8C /* Skill.swift */,
+				E22122A32697B73B00807E8C /* Post.swift */,
+				E22122B42697C8BA00807E8C /* Comment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -225,13 +225,13 @@
 				E221229D2697B5F900807E8C /* PostListPresenter.swift in Sources */,
 				E22122992697B50100807E8C /* PostListViewController.swift in Sources */,
 				E221227F2697AA5F00807E8C /* AppDelegate.swift in Sources */,
-				E22122B52697C8BA00807E8C /* Skill.swift in Sources */,
+				E22122B52697C8BA00807E8C /* Comment.swift in Sources */,
 				E221229B2697B5ED00807E8C /* PostListRouter.swift in Sources */,
 				E22122B32697C81C00807E8C /* CommentListPresenter.swift in Sources */,
 				E22122AF2697C81C00807E8C /* CommentListViewController.swift in Sources */,
 				E22122B02697C81C00807E8C /* CommentListModels.swift in Sources */,
 				E22122812697AA5F00807E8C /* SceneDelegate.swift in Sources */,
-				E22122A42697B73B00807E8C /* Job.swift in Sources */,
+				E22122A42697B73B00807E8C /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
