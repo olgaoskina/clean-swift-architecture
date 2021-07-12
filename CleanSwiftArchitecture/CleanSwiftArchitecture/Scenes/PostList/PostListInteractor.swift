@@ -18,15 +18,21 @@ class PostListInteractor: PostListBusinessLogic, PostListDataStore {
     var posts: [Post] = []
     var presenter: PostListPresentationLogic?
     
+    private let worker = PostListWorker()
+    
     func fetchPosts(_ request: PostListModels.FetchPostList.Request) {
-        // TODO: fetch posts
-        posts = [
-            Post(title: "Post 1"),
-            Post(title: "Post 2"),
-            Post(title: "Post 3")
-        ]
-        
-        let response = PostListModels.FetchPostList.Response(posts: posts)
-        presenter?.presentPosts(response)
+        worker.fetchPostList(with: PostListParams()) { result in
+            switch result {
+            case .success(let posts):
+                self.posts = posts
+                let response = PostListModels.FetchPostList.Response(posts: posts)
+                self.presenter?.presentPosts(response)
+            case .failure(_):
+                // TODO: show error
+                self.posts = []
+                let response = PostListModels.FetchPostList.Response(posts: [])
+                self.presenter?.presentPosts(response)
+            }
+        }
     }
 }

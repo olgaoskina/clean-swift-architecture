@@ -15,7 +15,12 @@ class PostListPresenter: PostListPresentationLogic {
     var viewController: PostListDisplayLogic?
     
     func presentPosts(_ response: PostListModels.FetchPostList.Response) {
-        let posts = response.posts.map { Post(title: $0.title.replacingOccurrences(of: " ", with: "-")) }
+        let posts = response.posts.map { Post(
+            userId: $0.userId,
+            id: $0.id,
+            title: $0.title.replacingOccurrences(of: " ", with: "-"),
+            body: $0.body
+        ) }
         
         let viewModel = PostListModels.FetchPostList.ViewModel(posts: posts)
         viewController?.displayPosts(viewModel)
