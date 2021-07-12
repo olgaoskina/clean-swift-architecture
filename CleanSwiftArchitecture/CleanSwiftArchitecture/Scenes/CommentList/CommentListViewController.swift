@@ -17,6 +17,7 @@ class CommentListViewController: UIViewController {
     private(set) var router: (CommentListRoutingLogic & CommentListDataPassing)?
     private var commentList = [Comment]() {
         didSet {
+            commentListTableView.refreshControl?.endRefreshing()
             commentListTableView.reloadData()
         }
     }
@@ -49,6 +50,8 @@ class CommentListViewController: UIViewController {
     private func configureTableView() {
         commentListTableView.delegate = self
         commentListTableView.dataSource = self
+        
+        addRefreshControl(to: commentListTableView)
     }
     
     private func setup() {
@@ -90,5 +93,11 @@ extension CommentListViewController: UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension CommentListViewController: Refreshable {
+    @objc func refresh() {
+        fetchComments()
     }
 }

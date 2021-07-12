@@ -17,6 +17,7 @@ class PostListViewController: UIViewController {
     private var router: PostListRoutingLogic?
     private var postList = [Post]() {
         didSet {
+            postListTableView.refreshControl?.endRefreshing()
             postListTableView.reloadData()
         }
     }
@@ -49,6 +50,8 @@ class PostListViewController: UIViewController {
     private func configureTableView() {
         postListTableView.delegate = self
         postListTableView.dataSource = self
+        
+        addRefreshControl(to: postListTableView)
     }
     
     private func setup() {
@@ -92,5 +95,11 @@ extension PostListViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         
         router?.routeToCommentList(ar: indexPath)
+    }
+}
+
+extension PostListViewController: Refreshable {
+    func refresh() {
+        fetchPosts()
     }
 }
