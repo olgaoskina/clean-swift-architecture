@@ -13,8 +13,13 @@ protocol PostListDisplayLogic {
 
 class PostListViewController: UIViewController {
     
-    var interactor: (PostListBusinessLogic & PostListDataStore)?
-    var router: PostListRoutingLogic?
+    private var interactor: (PostListBusinessLogic & PostListDataStore)?
+    private var router: PostListRoutingLogic?
+    private var postList = [Post]() {
+        didSet {
+            postListTableView.reloadData()
+        }
+    }
     
     @IBOutlet weak var postListTableView: UITableView!
     
@@ -64,18 +69,18 @@ class PostListViewController: UIViewController {
 
 extension PostListViewController: PostListDisplayLogic {
     func displayPosts(_ viewModel: PostListModels.FetchPostList.ViewModel) {
-        postListTableView.reloadData()
+        postList = viewModel.posts
     }
 }
 
 extension PostListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return interactor?.posts.count ?? 0
+        return postList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let postCell = tableView.dequeueReusableCell(withIdentifier: "PostTableViewCell") {
-            postCell.textLabel?.text = interactor?.posts[indexPath.row].title
+            postCell.textLabel?.text = postList[indexPath.row].title
             
             return postCell
         }

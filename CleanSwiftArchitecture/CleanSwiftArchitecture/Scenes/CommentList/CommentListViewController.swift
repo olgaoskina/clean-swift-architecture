@@ -13,8 +13,13 @@ protocol CommentListDisplayLogic {
 
 class CommentListViewController: UIViewController {
     
-    var interactor: (CommentListBusinessLogic & CommentListDataStore)?
-    var router: (CommentListRoutingLogic & CommentListDataPassing)?
+    private var interactor: (CommentListBusinessLogic & CommentListDataStore)?
+    private(set) var router: (CommentListRoutingLogic & CommentListDataPassing)?
+    private var commentList = [Comment]() {
+        didSet {
+            commentListTableView.reloadData()
+        }
+    }
     
     @IBOutlet weak var commentListTableView: UITableView!
     
@@ -64,18 +69,18 @@ class CommentListViewController: UIViewController {
 
 extension CommentListViewController: CommentListDisplayLogic {
     func displayComments(_ viewModel: CommentListModels.FetchCommentList.ViewModel) {
-        commentListTableView.reloadData()
+        commentList = viewModel.comments
     }
 }
 
 extension CommentListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return interactor?.comments.count ?? 0
+        return commentList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let commentCell = tableView.dequeueReusableCell(withIdentifier: "CommentTableViewCell") {
-            commentCell.textLabel?.text = interactor?.comments[indexPath.row].body
+            commentCell.textLabel?.text = commentList[indexPath.row].body
             
             return commentCell
         }
