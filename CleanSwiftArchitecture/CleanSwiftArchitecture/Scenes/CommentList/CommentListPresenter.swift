@@ -15,15 +15,21 @@ class CommentListPresenter: CommentListPresentationLogic {
     var viewController: CommentListDisplayLogic?
     
     func presentComments(_ response: CommentListModels.FetchCommentList.Response) {
-        let comments = response.comments.map { Comment(
-            postId: $0.postId,
-            id: $0.id,
-            name: $0.name,
-            email: $0.email,
-            body: $0.body.replacingOccurrences(of: " ", with: "_")
-        ) }
+        let comments = process(comments: response.comments)
         
         let viewModel = CommentListModels.FetchCommentList.ViewModel(comments: comments)
         viewController?.displayComments(viewModel)
+    }
+    
+    private func process(comments: [Comment]) -> [Comment] {
+        return comments.map { comment in
+            Comment(
+                postId: comment.postId,
+                id: comment.id,
+                name: comment.name,
+                email: comment.email,
+                body: comment.body.capitalized
+            )
+        }
     }
 }
