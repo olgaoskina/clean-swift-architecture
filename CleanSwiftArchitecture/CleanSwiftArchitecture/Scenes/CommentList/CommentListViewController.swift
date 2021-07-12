@@ -75,7 +75,7 @@ extension CommentListViewController: UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let commentCell = tableView.dequeueReusableCell(withIdentifier: "CommentTableViewCell") {
-            commentCell.textLabel?.text = interactor?.comments[indexPath.row].title
+            commentCell.textLabel?.text = interactor?.comments[indexPath.row].body
             
             return commentCell
         }

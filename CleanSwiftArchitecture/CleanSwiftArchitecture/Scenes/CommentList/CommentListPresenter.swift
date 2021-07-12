@@ -15,7 +15,13 @@ class CommentListPresenter: CommentListPresentationLogic {
     var viewController: CommentListDisplayLogic?
     
     func presentComments(_ response: CommentListModels.FetchCommentList.Response) {
-        let comments = response.comments.map { Comment(title: $0.title.replacingOccurrences(of: " ", with: "_")) }
+        let comments = response.comments.map { Comment(
+            postId: $0.postId,
+            id: $0.id,
+            name: $0.name,
+            email: $0.email,
+            body: $0.body.replacingOccurrences(of: " ", with: "_")
+        ) }
         
         let viewModel = CommentListModels.FetchCommentList.ViewModel(comments: comments)
         viewController?.displayComments(viewModel)

@@ -20,15 +20,36 @@ class CommentListInteractor: CommentListBusinessLogic, CommentListDataStore {
     var comments: [Comment] = []
     var presenter: CommentListPresentationLogic?
     
+    private let worker = CommentListWorker()
+    
     func fetchComments(_ request: CommentListModels.FetchCommentList.Request) {
-        // TODO: fetch comments
-        comments = [
-            Comment(title: "Comment 1"),
-            Comment(title: "Comment 2"),
-            Comment(title: "Comment 3")
-        ]
-        
+        guard let post = post else {
+            // TODO: handle error
+            failure()
+            return
+        }
+
+        let commentParams = CommentListParams(postId: post.id)
+        worker.fetchCommentList(with: commentParams) { result in
+            switch result {
+            case .success(let comments):
+                self.success(comments)
+            case .failure(_):
+                self.failure()
+            }
+        }
+    }
+    
+    private func success(_ comments: [Comment]) {
+        self.comments = comments
         let response = CommentListModels.FetchCommentList.Response(comments: comments)
-        presenter?.presentComments(response)
+        self.presenter?.presentComments(response)
+    }
+    
+    private func failure() {
+        // TODO: handle error
+        self.comments = []
+        let response = CommentListModels.FetchCommentList.Response(comments: [])
+        self.presenter?.presentComments(response)
     }
 }

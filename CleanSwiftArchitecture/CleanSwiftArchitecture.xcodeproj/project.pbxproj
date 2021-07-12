@@ -24,6 +24,9 @@
 		E22122B22697C81C00807E8C /* CommentListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122AD2697C81C00807E8C /* CommentListRouter.swift */; };
 		E22122B32697C81C00807E8C /* CommentListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122AE2697C81C00807E8C /* CommentListPresenter.swift */; };
 		E22122B52697C8BA00807E8C /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22122B42697C8BA00807E8C /* Comment.swift */; };
+		E25354AC269C308B00BA6D67 /* CommentResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25354AB269C308B00BA6D67 /* CommentResult.swift */; };
+		E25354AE269C309200BA6D67 /* CommentListParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25354AD269C309200BA6D67 /* CommentListParams.swift */; };
+		E25354B0269C309C00BA6D67 /* CommentListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25354AF269C309C00BA6D67 /* CommentListWorker.swift */; };
 		E27548F2269BA034000968D7 /* NetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27548E8269BA033000968D7 /* NetworkWorker.swift */; };
 		E27548F3269BA034000968D7 /* DTOToDomainConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27548E9269BA033000968D7 /* DTOToDomainConverter.swift */; };
 		E27548F4269BA034000968D7 /* PostResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27548EC269BA033000968D7 /* PostResult.swift */; };
@@ -51,6 +54,9 @@
 		E22122AD2697C81C00807E8C /* CommentListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentListRouter.swift; sourceTree = "<group>"; };
 		E22122AE2697C81C00807E8C /* CommentListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentListPresenter.swift; sourceTree = "<group>"; };
 		E22122B42697C8BA00807E8C /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		E25354AB269C308B00BA6D67 /* CommentResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentResult.swift; sourceTree = "<group>"; };
+		E25354AD269C309200BA6D67 /* CommentListParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentListParams.swift; sourceTree = "<group>"; };
+		E25354AF269C309C00BA6D67 /* CommentListWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentListWorker.swift; sourceTree = "<group>"; };
 		E27548E8269BA033000968D7 /* NetworkWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkWorker.swift; sourceTree = "<group>"; };
 		E27548E9269BA033000968D7 /* DTOToDomainConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTOToDomainConverter.swift; sourceTree = "<group>"; };
 		E27548EC269BA033000968D7 /* PostResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostResult.swift; sourceTree = "<group>"; };
@@ -157,6 +163,7 @@
 				E22122AC2697C81C00807E8C /* CommentListInteractor.swift */,
 				E22122AD2697C81C00807E8C /* CommentListRouter.swift */,
 				E22122AE2697C81C00807E8C /* CommentListPresenter.swift */,
+				E25354AF269C309C00BA6D67 /* CommentListWorker.swift */,
 			);
 			path = CommentList;
 			sourceTree = "<group>";
@@ -183,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				E27548EC269BA033000968D7 /* PostResult.swift */,
+				E25354AB269C308B00BA6D67 /* CommentResult.swift */,
 			);
 			path = Result;
 			sourceTree = "<group>";
@@ -191,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				E27548F0269BA033000968D7 /* PostListParams.swift */,
+				E25354AD269C309200BA6D67 /* CommentListParams.swift */,
 			);
 			path = Params;
 			sourceTree = "<group>";
@@ -266,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E22122B12697C81C00807E8C /* CommentListInteractor.swift in Sources */,
+				E25354AE269C309200BA6D67 /* CommentListParams.swift in Sources */,
 				E22122A12697B64700807E8C /* PostListModels.swift in Sources */,
 				E22122B22697C81C00807E8C /* CommentListRouter.swift in Sources */,
 				E221229F2697B62800807E8C /* PostListInteractor.swift in Sources */,
@@ -273,6 +283,7 @@
 				E22122992697B50100807E8C /* PostListViewController.swift in Sources */,
 				E221227F2697AA5F00807E8C /* AppDelegate.swift in Sources */,
 				E22122B52697C8BA00807E8C /* Comment.swift in Sources */,
+				E25354AC269C308B00BA6D67 /* CommentResult.swift in Sources */,
 				E27548F4269BA034000968D7 /* PostResult.swift in Sources */,
 				E27548F2269BA034000968D7 /* NetworkWorker.swift in Sources */,
 				E221229B2697B5ED00807E8C /* PostListRouter.swift in Sources */,
@@ -282,6 +293,7 @@
 				E22122B02697C81C00807E8C /* CommentListModels.swift in Sources */,
 				E27548FA269BA0C3000968D7 /* PostListWorker.swift in Sources */,
 				E22122812697AA5F00807E8C /* SceneDelegate.swift in Sources */,
+				E25354B0269C309C00BA6D67 /* CommentListWorker.swift in Sources */,
 				E22122A42697B73B00807E8C /* Post.swift in Sources */,
 				E27548F3269BA034000968D7 /* DTOToDomainConverter.swift in Sources */,
 			);

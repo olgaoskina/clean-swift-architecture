@@ -1,13 +1,13 @@
 //
-//  Comment.swift
+//  CommentResult.swift
 //  CleanSwiftArchitecture
 //
-//  Created by Olga Dudina on 09.07.2021.
+//  Created by Olga Dudina on 12.07.2021.
 //
 
 import Foundation
 
-struct Comment {
+struct CommentResult: Decodable {
     let postId: Int
     let id: Int
     let name: String
